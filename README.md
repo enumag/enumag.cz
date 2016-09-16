@@ -1,4 +1,4 @@
-# Tomas Votruba - Sculpin Blog
+# Jáchym Toušek - Sculpin Blog
 
 [![Build Status](https://img.shields.io/travis/TomasVotruba/tomasvotruba.cz.svg?style=flat-square)](https://travis-ci.org/TomasVotruba/tomasvotruba.cz)
 
