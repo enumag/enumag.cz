@@ -1,0 +1,101 @@
+---
+layout: default
+title: Libraries maintained by me
+id: open-source
+libraries:
+    migrations:
+        github: 'Zenify/DoctrineMigrations'
+        packagist: 'zenify/doctrine-migrations'
+        scruntinizer: true
+    validator:
+        github: 'Kdyby/Validator'
+        packagist: 'kdyby/validator'
+    codeception:
+        github: 'Arachne/Codeception'
+        packagist: 'arachne/codeception'
+    event-dispatcher:
+        github: 'Arachne/EventDispatcher'
+        packagist: 'arachne/event-dispatcher'
+    entity-loader:
+        github: 'Arachne/EntityLoader'
+        packagist: 'arachne/entity-loader'
+    doctrine:
+        github: 'Arachne/Doctrine'
+        packagist: 'arachne/doctrine'
+    forms:
+        github: 'Arachne/Forms'
+        packagist: 'arachne/forms'
+    upload:
+        github: 'Arachne/Upload'
+        packagist: 'arachne/upload'
+    event-manager:
+        github: 'Arachne/EventManager'
+        packagist: 'arachne/event-manager'
+    di-helpers:
+        github: 'Arachne/DI-Helpers'
+        packagist: 'arachne/di-helpers'
+    property-access:
+        github: 'Arachne/PropertyAccess'
+        packagist: 'arachne/property-access'
+    expression-language:
+        github: 'Arachne/ExpressionLanguage'
+        packagist: 'arachne/expression-language'
+    twig:
+        github: 'Arachne/Twig'
+        packagist: 'arachne/twig'
+    container-adapter:
+        github: 'Arachne/ContainerAdapter'
+        packagist: 'arachne/container-adapter'
+---
+<div class="container">
+    <div class="page">
+        <div class="main">
+            <div class="row">
+                <header class="page-header text-center">
+                    <h1>{{ page.title }}</h1>
+                    <br>
+                </header>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <table>
+                        {% for library in page.libraries %}
+                            <tr>
+                                <td>
+                                    <a href="http://github.com/{{ library.github }}">{{ library.github }}</a>
+                                </td>
+                                <td>
+                                    <a href="https://travis-ci.org/{{ library.github }}">
+                                        <img src="https://img.shields.io/travis/{{ library.github }}.svg?style=flat-square" alt="Build Status">
+                                    </a>
+                                </td>
+                                <td>
+                                    {% if library.scruntinizer is defined %}
+                                        <a href="https://scrutinizer-ci.com/g/{{ library.github }}">
+                                            <img src="https://img.shields.io/scrutinizer/coverage/g/{{ library.github }}.svg?style=flat-square" alt="Code Coverage">
+                                        </a>
+                                    {% else %}
+                                        <a href="https://coveralls.io/github/{{ library.github }}?branch=master">
+                                            <img src="https://img.shields.io/coveralls/{{ library.github }}/master.svg?style=flat-square" alt="Coverage Status">
+                                        </a>
+                                    {% endif %}
+                                </td>
+                                <td>
+                                    <a href="https://www.versioneye.com/php/{{ library.packagist|replace({'/': ':'}) }}">
+                                        <img src="https://img.shields.io/versioneye/d/php/{{ library.packagist|replace({'/': ':'}) }}.svg?style=flat-square" alt="VersionEye">
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="https://packagist.org/packages/{{ library.packagist }}">
+                                        <img src="https://img.shields.io/packagist/v/{{ library.packagist }}.svg?style=flat-square" alt="Latest stable">
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

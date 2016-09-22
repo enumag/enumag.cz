@@ -7,37 +7,23 @@
         <meta name="robots" content="index, follow">
 
         {# fonts #}
-        <script src="//use.edgefonts.net/source-sans-pro:n2,i2,n3,i3,n4,i4,n6,i6,n7,i7,n9,i9:all.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700&subset=latin-ext" rel="stylesheet">
 
-        <link href="/css/theme/webmozart/style.css" rel="stylesheet" type="text/css" />
+        <link href="/css/theme/webmozart/style.css" rel="stylesheet" type="text/css">
 
         {# code highlighter #}
-        <link href="/css/theme/webmozart/prism.css" rel="stylesheet" type="text/css" />
-        <link href="/css/style.css" rel="stylesheet" type="text/css" />
-        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="/css/theme/webmozart/prism.css" rel="stylesheet" type="text/css">
+        <link href="/css/style.css" rel="stylesheet" type="text/css">
+        <link href="/assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
         <meta name="mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="google-site-verification" content="8AQYRvJvZguoIfpFPVXwN2uxwiDJ_wj9qTbklsLvu54" />
+        <meta name="google-site-verification" content="">
 
         {% block socialTags %}
         {% endblock %}
 
-        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="{{ site.title }} články" />
-
-        <!-- Facebook Pixel Code -->
-        <script>
-            !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-                    n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-                n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-                t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-                    document,'script','//connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '201338863559186');
-            fbq('track', "PageView");</script>
-        <noscript><img height="1" width="1" style="display:none"
-                       src="https://www.facebook.com/tr?id=201338863559186&ev=PageView&noscript=1"
-            /></noscript>
-        <!-- End Facebook Pixel Code -->
+        <link rel="alternate" type="application/atom+xml" href="/atom.xml" title="Articles about {{ site.title }}">
     </head>
     <body>
         <div class="body">
@@ -56,24 +42,25 @@
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                             <ul class="nav navbar-nav">
-                                <li class="logo"><a href="/">Tomáš Votruba</a></li>
-                                <li {% if page.id == "mentoring" %}class="active"{% endif %}>
-                                    <a href="/zkus-si-mentoring">Mentoring</a>
-                                </li>
-                                <li {% if page.id == "satisfy" %}class="active"{% endif %}>
-                                    <a href="/reference">Spokojení klienti</a>
-                                </li>
-                                <li {% if page.id == "skills" %}class="active"{% endif %}>
-                                    <a href="/skoleni">Co vám můžu předat</a>
+                                <li class="logo">
+                                    <a href="/">
+                                        <img src="https://www.gravatar.com/avatar/5632d1bf9598d8d03fa3da1c54f2118e?s=60" class="pull-left">
+                                        Jáchym Toušek
+                                        <br>
+                                        @enumag
+                                    </a>
                                 </li>
                                 <li {% if page.id == "blog" %}class="active"{% endif %}>
-                                    <a href="/blog">Blog</a>
+                                    <a href="/">Blog</a>
                                 </li>
-                                <li {% if page.id == "price" %}class="active"{% endif %}>
-                                    <a href="/cenik">Ceník</a>
+                                <li {% if page.id == "open-source" %}class="active"{% endif %}>
+                                    <a href="/open-source">Open-Source</a>
+                                </li>
+                                <li {% if page.id == "links" %}class="active"{% endif %}>
+                                    <a href="/links">Links</a>
                                 </li>
                                 <li {% if page.id == "contact" %}class="active"{% endif %}>
-                                    <a href="/kontakt">Kontakt</a>
+                                    <a href="/contact">Contact</a>
                                 </li>
                             </ul>
                         </div>
@@ -90,8 +77,8 @@
             <footer class="footer">
                 <div class="container">
                     <p>
-                        &copy; 2015 Tomáš Votruba. Jede na <a href="https://sculpin.io/">Sculpin</a>.<br>
-                        Nádherná šablona inspirována <a href="http://webmozart.io">webmozart.io</a> - díky!
+                        &copy; 2016 Jáchym Toušek. Built with <a href="https://github.com/Symplify/PHP7_Sculpin">Sculpin</a>.<br>
+                        Template inspired by <a href="http://webmozart.io">webmozart.io</a>, web engine by <a href="http://www.tomasvotruba.cz/">tomasvotruba.cz</a>. Thanks!
                     </p>
                 </div>
             </footer>

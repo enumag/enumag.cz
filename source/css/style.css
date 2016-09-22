@@ -10,11 +10,11 @@ h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
 
 @media (min-width: 1000px) {
     h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
-        font-family: source-sans-pro, sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 
     body {
-        font-family: "source-sans-pro", sans-serif;
+        font-family: 'Source Sans Pro', sans-serif;
     }
 }
 
@@ -51,13 +51,13 @@ h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
-    background-color: #08c;
-    border-color: #08c;
+    background-color: #732C7B;
+    border-color: #421C52;
 }
 
 .btn-primary:hover  {
-    background-color: #0af;
-    border-color: #0af;
+    background-color: #732C7B;
+    border-color: #9C0F5F;
 }
 
 
@@ -76,19 +76,28 @@ pre {
 
 /* true colors */
 .navbar {
-    background-color: #08c;
+    background-color: #732C7B;
 }
 
 .navbar-default {
-    border-color: #0af;
+    border-color: #421C52;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #87CEFA;
+    color: #BDAEC6;
 }
 
 .logo {
     font-size: 1.3em;
+}
+
+.navbar-default .logo a {
+    height: 70px;
+    padding: 13px 30px 13px 15px;
+}
+
+.navbar-default .logo img {
+    margin: -8px 10px -8px 0;
 }
 
 @media (min-width: 768px) {
@@ -99,18 +108,18 @@ pre {
 
 
 .page-header h1 {
-    color: #08c;
+    color: #4CACDB;
     font-size: 2.2em;
     font-weight: 600;
 }
 
 a, a:active {
-    color: #64991a;
+    color: #4CACDB;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #8CD02C;
+    color: #4CC5DB;
     text-decoration: none;
 }
 
@@ -147,7 +156,6 @@ article h2, article h3 {
 
 
 blockquote {
-    font-family: "source-sans-pro", Helvetica, Arial, sans-serif;
     margin: .7em 0;
 }
 

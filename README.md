@@ -6,10 +6,9 @@
 
 ```sh
 composer update
-vendor/bin/sculpin generate --watch --server --port 8001 # it needs to be run from vendor, to autoload all composer classes 
 ```
 
-And open `http://localhost:8001`.
+And open `http://localhost:8000`.
 
 ## For production?
 
