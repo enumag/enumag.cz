@@ -36,6 +36,10 @@ Example
 ----
 
 ```language-php
+use Symfony\Component\Validator\Constraints as Assert;
+
+//...
+
     /**
      * @var \DateTime
      */
@@ -49,3 +53,13 @@ Example
 ```
 
 Indeed it's this easy! And more importantly the Expression constraint can help you solve many other situations. Plus the ExpressionLanguage can be [extended](http://symfony.com/doc/current/components/expression_language/extending.html) with your own functions.
+
+
+Usage with Nette Framework
+----
+
+If you want to use the Symfony/Validator component and the Expression constraint in your Nette application you will need these libraries:
+
+- [Kdyby/Validator](https://github.com/Kdyby/Validator)
+- [Arachne/ExpressionLanguage](https://github.com/Arachne/ExpressionLanguage)
+- [Arachne/Doctrine](https://github.com/Arachne/Doctrine) (optional, enables caching for the ExpressionLanguage parser)
