@@ -19,10 +19,7 @@ Use cases
 The outdated solution
 ----
 
-The obvious solution is to create a custom constraint and validator. It's explained in [several](https://creativcoders.wordpress.com/2014/07/19/symfony2-two-fields-comparison-with-custom-validation-constraints/) [articles](http://www.yewchube.com/2011/08/symfony-2-field-comparison-validator/) and [StackOverflow](http://stackoverflow.com/questions/15972404/symfony2-validation-datetime-1-should-be-before-datetime-2) [questions](http://stackoverflow.com/questions/8170301/symfony2-form-validation-based-on-two-fields). Note that all of these are several years old. Other answers suggest using the Callback constraint instead.
-
-If your application requires several different comparisons like this you end up with quite a lot of code. Way more than a simple thing like this should really require.
-
+The obvious solution is to create a custom constraint and validator. It's explained in [several](https://creativcoders.wordpress.com/2014/07/19/symfony2-two-fields-comparison-with-custom-validation-constraints/) [articles](http://www.yewchube.com/2011/08/symfony-2-field-comparison-validator/) and [StackOverflow](http://stackoverflow.com/questions/15972404/symfony2-validation-datetime-1-should-be-before-datetime-2) [questions](http://stackoverflow.com/questions/8170301/symfony2-form-validation-based-on-two-fields). Note that all of these are several years old. And you might easily end up with a lot of custom constraints. Other answers suggest using the Callback constraint instead.
 
 The correct solution
 ----
