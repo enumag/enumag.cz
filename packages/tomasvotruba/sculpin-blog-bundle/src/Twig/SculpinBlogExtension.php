@@ -28,7 +28,7 @@ final class SculpinBlogExtension extends Twig_Extension
             }),
             new Twig_SimpleFilter('githubEditPostUrl', function ($post) {
                 return
-                    'https://github.com/TomasVotruba/tomasvotruba.cz/edit/master/source/_posts/'.
+                    'https://github.com/enumag/enumag.cz/edit/master/source/_posts/'.
                     $this->getFileNameFromPost($post);
             })
         ];
