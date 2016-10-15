@@ -6,6 +6,7 @@
 
 ```sh
 composer update
+php vendor/symplify/php7_sculpin/bin/sculpin generate --watch --server
 ```
 
 And open `http://localhost:8000`.
