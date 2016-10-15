@@ -1,23 +1,67 @@
+---
+layout: default
+title: Links
+id: links
+categories:
+    symfony:
+        title: Symfony
+    nette:
+        title: Nette
+    html:
+        title: HTML / CSS / JS
+        links:
+            '<head> Cheat Sheet': http://gethead.info/
+            Character entities: https://brajeshwar.github.io/entities/
+    blogs_cz:
+        title: Blogs (cz only)
+        links:
+            Tomáš Votruba: http://tomasvotruba.cz
+            Filip Procházka: https://filip-prochazka.com
+            Martin Zlámal: http://zlml.cz
+            Patrik Votoček: https://www.vrtak-cz.net
+            Jan Tvrdík: http://merxes.cz
+            Jan Škrášek: http://jan.skrasek.com
+            Luděk Veselý: https://www.ludekvesely.cz
+            Martin Štekl: https://www.steky.cz
+            Pavel Janda: http://paveljanda.com
+            Radek Dostál: https://www.radekdostal.cz
+    phpstorm:
+        title: PhpStorm
+        links:
+            Be Awesome in PHPStorm: https://laracasts.com/series/how-to-be-awesome-in-phpstorm
+            My Favourite PhpStorm Secrets: https://nomadphp.com/favourite-phpstorm-secrets/
+    other:
+        title: Other
+---
 
+<div class="container">
+    <div class="page">
+        <div class="main">
+            <div class="row">
+                <header class="page-header text-center">
+                    <h1>{{ page.title }}</h1>
+                </header>
+            </div>
 
+            <div class="row">
+                <div class="col-md-12">
+                    <p>I often come across various useful resources - articles, libraries, utilites, comparisons, blogs, etc. - but then later when I actually need it I can't remember where I found it. On this page I'm gathering everything I found useful and recommend you to read.</p>
 
-Links (na články, knihovny, blogy, přehledy etc.)
+                    {% for category in page.categories if category.links %}
+                        <h2>{{ category.title }}</h2>
 
-
-Symfony
-
-
-
-Nette
-
-
-
-Blogs
-
-
-
-HTML / CSS / JS
-
-
-Other
-
+                        <ul>
+                        {% for title, link in category.links %}
+                            <li>
+                                <a href="{{ link }}">
+                                    {{ title }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                        </ul>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
