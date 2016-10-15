@@ -15,6 +15,24 @@ Use cases
 - For date interval ensure that starting date is lower than ending date.
 - Password confirmation value should be the same as password.
 
+```language-php
+use Symfony\Component\Validator\Constraints as Assert;
+
+class Event {
+    /**
+     * @var \DateTime
+     * @Assert\Type("DateTime")
+     */
+    protected $startDate;
+
+    /**
+     * @todo Add validator constraint that end date cannot be lower than start date.
+     * @var \DateTime
+     * @Assert\Type("DateTime")
+     */
+    protected $endDate;
+}
+```
 
 The outdated solution
 ----
@@ -35,21 +53,23 @@ Example
 ```language-php
 use Symfony\Component\Validator\Constraints as Assert;
 
-//...
-
+class Event {
     /**
      * @var \DateTime
+     * @Assert\Type("DateTime")
      */
     protected $startDate;
 
     /**
      * @var \DateTime
+     * @Assert\Type("DateTime")
      * @Assert\Expression("value >= this.startDate")
      */
     protected $endDate;
+}
 ```
 
-Indeed it's this easy! And more importantly the Expression constraint can help you solve many other situations. Plus the ExpressionLanguage can be [extended](http://symfony.com/doc/current/components/expression_language/extending.html) with your own functions.
+Indeed it's this easy! More importantly the Expression constraint can help you solve many other situations. Plus the ExpressionLanguage can be [extended](http://symfony.com/doc/current/components/expression_language/extending.html) with your own functions.
 
 
 Usage with Nette Framework
