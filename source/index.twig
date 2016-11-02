@@ -13,7 +13,7 @@ id: blog
         </header>
 
         <div class="main">
-            <p>
+            <p class="rss-btn">
                 <a href="/atom.xml" class="btn btn-primary">
                     <em class="fa fa-rss fa-fw"></em>
                     RSS&nbsp;
@@ -23,16 +23,6 @@ id: blog
             {% for post in data.posts %}
                 {{ include('partials/postPreview.twig', {'post': post}) }}
             {% endfor %}
-
-            <br>
-            <br>
-
-            <p>
-                <a href="/atom.xml" class="btn btn-primary">
-                    <em class="fa fa-rss fa-fw"></em>
-                    RSS&nbsp;
-                </a>
-            </p>
         </div>
     </div>
 </div>

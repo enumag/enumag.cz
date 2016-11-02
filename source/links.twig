@@ -48,19 +48,21 @@ categories:
                 <div class="col-md-12">
                     <p>I often come across various useful resources - articles, libraries, utilites, comparisons, blogs, etc. - but then later when I actually need it I can't remember where I found it. On this page I'm gathering everything I found useful and recommend you to read.</p>
 
-                    {% for category in page.categories if category.links %}
-                        <h2>{{ category.title }}</h2>
+                    <div class="links">
+                        {% for category in page.categories if category.links %}
+                            <h2>{{ category.title }}</h2>
 
-                        <ul>
-                        {% for title, link in category.links %}
-                            <li>
-                                <a href="{{ link }}">
-                                    {{ title }}
-                                </a>
-                            </li>
+                            <ul>
+                            {% for title, link in category.links %}
+                                <li>
+                                    <a href="{{ link }}">
+                                        {{ title }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                            </ul>
                         {% endfor %}
-                        </ul>
-                    {% endfor %}
+                    </div>
                 </div>
             </div>
         </div>
