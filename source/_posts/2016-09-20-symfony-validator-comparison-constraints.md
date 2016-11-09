@@ -1,5 +1,5 @@
 ---
-title: "Symfony/Validator: How to implement comparison constraints"
+title: "Symfony/Validator: Comparison constraints"
 categories:
     - Symfony
 perex: > # multi-line string
@@ -18,7 +18,8 @@ Use cases
 ```language-php
 use Symfony\Component\Validator\Constraints as Assert;
 
-class Event {
+class Event
+{
     /**
      * @var \DateTime
      * @Assert\Type("DateTime")
@@ -53,7 +54,8 @@ Example
 ```language-php
 use Symfony\Component\Validator\Constraints as Assert;
 
-class Event {
+class Event
+{
     /**
      * @var \DateTime
      * @Assert\Type("DateTime")
