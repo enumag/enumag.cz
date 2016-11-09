@@ -1,0 +1,18 @@
+<phpunit
+        bootstrap="tests/bootstrap.php"
+        colors="true"
+>
+    <testsuites>
+        <testsuite>
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src</directory>
+        </whitelist>
+    </filter>
+    <listeners>
+        <listener class="Tests\ClearLogAndCacheTestListener" />
+    </listeners>
+</phpunit>

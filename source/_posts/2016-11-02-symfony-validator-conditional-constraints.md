@@ -26,6 +26,7 @@ class Client
 
     /**
      * @var int
+     * @Assert\NotNull()
      * @Assert\Choice({Client::TYPE_COMPANY, CLIENT::TYPE_PERSON})
      */
     protected $type;
@@ -70,25 +71,26 @@ class Client
 
     /**
      * @var int
+     * @Assert\NotNull()
      * @Assert\Choice({Client::TYPE_COMPANY, CLIENT::TYPE_PERSON})
      */
     protected $type;
 
     /**
      * @var string
-     * @Assert\NotBlank(groups={"company"})
+     * @Assert\NotBlank(groups = {"company"})
      */
     protected $company;
 
     /**
      * @var string
-     * @Assert\NotBlank(groups={"person"})
+     * @Assert\NotBlank(groups = {"person"})
      */
     protected $firstname;
 
     /**
      * @var string
-     * @Assert\NotBlank(groups={"person"})
+     * @Assert\NotBlank(groups = {"person"})
      */
     protected $lastname;
 }
@@ -102,6 +104,9 @@ To make the validation truly conditional it's better to let the Client entity de
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\GroupSequenceProviderInterface;
 
+/**
+ * @Assert\GroupSequenceProvider()
+ */
 class Client implements GroupSequenceProviderInterface
 {
     // same as before
@@ -109,10 +114,11 @@ class Client implements GroupSequenceProviderInterface
     public function getGroupSequence()
     {
         return [
-            // Include the default group to validate the $type property as well.
-            'Default',
+            // Include the "Client" group to validate the $type property as well.
+            // Note that using the "Default" group here won't work!
+            'Client',
             // Use either the person or company group based on whether company is filled or not.
-            $this->type === TYPE_COMPANY ? 'company' : 'person',
+            $this->type === self::TYPE_PERSON ? 'person' : 'company',
         ];
     }
 }
@@ -126,6 +132,9 @@ Prior to Symfony 3.2 there was a drawback to this solution. Symfony/Validator ru
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Component\Validator\GroupSequenceProviderInterface;
 
+/**
+ * @Assert\GroupSequenceProvider()
+ */
 class Client implements GroupSequenceProviderInterface
 {    
     // same as before
@@ -137,8 +146,8 @@ class Client implements GroupSequenceProviderInterface
             // If we want to get all violations at once we will return just
             // one validation step containing an array of the groups to validate.
             [
-                'Default',
-                $this->type === TYPE_COMPANY ? 'company' : 'person',
+                'Client',
+                $this->type === self::TYPE_PERSON ? 'person' : 'company',
             ]
         ];
     }
