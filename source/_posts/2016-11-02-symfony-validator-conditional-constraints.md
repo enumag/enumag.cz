@@ -1,5 +1,5 @@
 ---
-title: "Symfony/Validator: Conditional constraints"
+title: "Mastering Symfony/Validator (2/3): Conditional constraints"
 categories:
     - Symfony
 perex: > # multi-line string

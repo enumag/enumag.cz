@@ -1,5 +1,5 @@
 ---
-title: "Symfony/Validator: Comparison constraints"
+title: "Mastering Symfony/Validator (1/3): Comparison constraints"
 categories:
     - Symfony
 perex: > # multi-line string
