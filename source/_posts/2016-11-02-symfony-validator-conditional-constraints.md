@@ -14,7 +14,7 @@ Use case
 
 - Client can be a person or a company. In a form you need to either fill the comany name or both firstname and lastname.
 
-The use case is a bit articifial and you would probably solve this particular situation otherwise. Conditional validators are often needed in more complex use cses that I don't want to go into here for simplicity.
+The use case is a bit articifial and you might solve this particular situation otherwise. Conditional validators are often needed in more complex use cases that I don't want to go into here for simplicity.
 
 ```language-php
 use Symfony\Component\Validator\Constraints as Assert;
@@ -124,9 +124,9 @@ class Client implements GroupSequenceProviderInterface
 }
 ```
 
-Now you can validate the client entity without specifying any groups. Symfony/Validator will recognize that it implements he GroupSequenceProviderInterface and will call the getGroupSequence() method to determine the validation groups.
+Now you can validate the client entity without specifying any groups. Symfony/Validator will recognize that it implements the GroupSequenceProviderInterface and will call the getGroupSequence() method to determine the validation groups. The `@Assert\GroupSequenceProvider()` annotation is necessary as well!
 
-Prior to Symfony 3.2 there was a drawback to this solution. Symfony/Validator runs the groups from a GroupSequence one by one and if one and skips the rest if one fails. It was not possible to get all of the violations at once, just one group at a time. With my pull request that was accepted into Symfony 3.2 it is now possible to validate multiple validation groups in each step. If you only use one step you can get all violations at once.
+Prior to Symfony 3.2 there was a drawback to this solution. Symfony/Validator runs the groups from a GroupSequence one by one and if one and skips the rest if one fails. It was not possible to get all of the violations at once, just the first group with any failure. With my pull request that was accepted into Symfony 3.2 it is now possible to validate multiple validation groups in each step. If you only use one step you can get all violations at once.
 
 ```language-php
 use Symfony\Component\Validator\Constraints as Assert;
@@ -154,12 +154,11 @@ class Client implements GroupSequenceProviderInterface
 }
 ```
 
-And that's it! In the end conditional validation is surprisingly easy with Symfony/Validator even though it looked complicated at first glance.
+And that's it! Now Validator will validate the client differently based on the `$type` property and give you all violations.
+
+In the end conditional validation is surprisingly easy with Symfony/Validator. The solution is just a bit hiddden and not widely known.
 
 Usage with Nette Framework
 ----
 
-If you want to use the Symfony/Validator component and the Expression constraint in your Nette application you will need these libraries:
-
-- [Kdyby/Validator](https://github.com/Kdyby/Validator)
-- [Arachne/Doctrine](https://github.com/Arachne/Doctrine) (optional, enables caching for the ExpressionLanguage parser)
+If you want to use the Symfony/Validator component in your Nette application you will need [Kdyby/Validator](https://github.com/Kdyby/Validator).
