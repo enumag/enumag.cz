@@ -12,7 +12,7 @@ lang: en
 Use case
 ----
 
-- Client can be a person or a company. In a form you need to either fill the comany name or both firstname and lastname.
+Client can be a person or a company. In a form you need to either fill the comany name or both firstname and lastname.
 
 The use case is a bit articifial and you might solve this particular situation otherwise. Conditional validators are often needed in more complex use cases that I don't want to go into here for simplicity.
 
