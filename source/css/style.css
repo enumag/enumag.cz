@@ -126,6 +126,12 @@ p {
     margin-bottom: .5em;
 }
 
+.blog-post-detail header:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 article h2 {
     font-size: 1.8em;
 }
