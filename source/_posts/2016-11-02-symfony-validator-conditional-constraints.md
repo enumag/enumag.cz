@@ -1,5 +1,5 @@
 ---
-title: "Mastering Symfony/Validator (2/3): Conditional constraints"
+title: "Symfony/Validator (2/3): Conditional constraints"
 categories:
     - Symfony
 perex: > # multi-line string
@@ -110,7 +110,7 @@ use Symfony\Component\Validator\GroupSequenceProviderInterface;
 class Client implements GroupSequenceProviderInterface
 {
     // same as before
-    
+
     public function getGroupSequence()
     {
         return [
@@ -136,7 +136,7 @@ use Symfony\Component\Validator\GroupSequenceProviderInterface;
  * @Assert\GroupSequenceProvider()
  */
 class Client implements GroupSequenceProviderInterface
-{    
+{
     // same as before
 
     public function getGroupSequence()
