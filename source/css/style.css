@@ -3,6 +3,7 @@ body {
     font-size: 17px;
     line-height: 1.5em;
     min-width: 320px;
+    color: #5c5c5c;
 }
 
 h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
@@ -10,13 +11,13 @@ h1, h1 small, .h1, h2, .h2, h3, .h3, h4, .h4 {
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
-    background-color: #732C7B;
-    border-color: #421C52;
+    background-color: #124768;
+    border-color: #1f7db6;
 }
 
 .btn-primary:hover  {
-    background-color: #732C7B;
-    border-color: #9C0F5F;
+    background-color: #1f7db6;
+    border-color: #1f7db6;
 }
 
 
@@ -35,51 +36,79 @@ pre {
 
 /* true colors */
 .navbar {
-    background-color: #732C7B;
+    background-color: #124768;
+}
+
+.nav {
+    float: right;
 }
 
 .navbar-default {
-    border-color: #421C52;
+    border-color: #fff;
 }
 
 .navbar-default .navbar-nav > li > a {
-    color: #BDAEC6;
+    color: #c9dae4;
+    font-size: 1.1em;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.navbar-collapse {
+    padding: 0;
 }
 
 .logo {
     font-size: 1.3em;
+    float: left;
+    position: relative;
+    padding-left: 75px;
 }
 
 .navbar-default .logo a {
     height: 70px;
-    padding: 13px 30px 13px 15px;
+    padding: 10px 0 0;
+    color: #c9dae4;
+    display: block;
 }
 
 .navbar-default .logo img {
-    margin: -8px 10px -8px 0;
+    position: absolute;
+    left: 0;
+    top: 5px;
+    border-radius: 50%;
 }
 
-@media (min-width: 768px) {
-    .logo {
-        margin-left: -1.6em;
-    }
+.nickname {
+    font-size: 0.8em;
+    display: block;
+    color: #fff;
+    font-weight: normal;
 }
 
 
 .page-header h1 {
-    color: #4CACDB;
+    color: #2986c2;
     font-size: 2.2em;
     font-weight: 600;
 }
 
 a, a:active {
-    color: #4CACDB;
+    color: #2986c2;
     text-decoration: none;
 }
 
 a:hover, a:focus {
-    color: #4CC5DB;
+    color: #5aa8dc;
     text-decoration: none;
+}
+
+p {
+    font-size: 1.05em;
+}
+
+.footer {
+    height: 90px;
 }
 
 
@@ -147,11 +176,6 @@ a.navbar-toggle:hover {
     font-family: Arial, sans-serif;
 }
 
-.contacts {
-    font-size: 1.3em;
-    line-height: 1.5em;
-}
-
 .rss-btn {
     text-align: right;
 }
@@ -184,4 +208,43 @@ a.navbar-toggle:hover {
         column-count: 3;
         column-gap: 20px;
     }
+}
+
+.content-about {
+    text-align: center;
+}
+
+.contacts {
+    line-height: 2em;
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    margin-top: 2em;
+}
+.contacts span {
+    width: 70px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.02em;
+}
+
+.contacts a {
+    font-size: 1.4em;
+}
+
+.contacts a + a {
+    position: relative;
+    padding-left: 13px;
+    margin-left: 10px;
+}
+
+.contacts a + a:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #5c5c5c;
+    display: block;
+    top: 5px;
+    left: 0;
+    bottom: 3px;
 }

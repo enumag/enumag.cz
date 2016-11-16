@@ -4,6 +4,7 @@ categories:
     - Symfony
 perex: > # multi-line string
     In Symfony/Validator there is no obvious way to implement validations like comparing a value to another property on the same object. There are several articles about this topic already but literally all of them are completely outdated. In this article I'll cover the correct way to solve this.
+thumbnail: symfony.png
 lang: en
 ---
 

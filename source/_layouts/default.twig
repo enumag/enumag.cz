@@ -41,15 +41,14 @@
 
                         <!-- Collect the nav links, forms, and other content for toggling -->
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <div class="logo">
+                                <a href="/">
+                                    <img src="https://www.gravatar.com/avatar/5632d1bf9598d8d03fa3da1c54f2118e?s=60" class="pull-left">
+                                    Jáchym Toušek
+                                    <span class="nickname">@enumag</span>
+                                </a>
+                            </div>
                             <ul class="nav navbar-nav">
-                                <li class="logo">
-                                    <a href="/">
-                                        <img src="https://www.gravatar.com/avatar/5632d1bf9598d8d03fa3da1c54f2118e?s=60" class="pull-left">
-                                        Jáchym Toušek
-                                        <br>
-                                        @enumag
-                                    </a>
-                                </li>
                                 <li {% if page.id == "blog" %}class="active"{% endif %}>
                                     <a href="/">Blog</a>
                                 </li>
@@ -59,8 +58,8 @@
                                 <li {% if page.id == "links" %}class="active"{% endif %}>
                                     <a href="/links">Links</a>
                                 </li>
-                                <li {% if page.id == "contact" %}class="active"{% endif %}>
-                                    <a href="/contact">Contact</a>
+                                <li {% if page.id == "about" %}class="active"{% endif %}>
+                                    <a href="/about">About</a>
                                 </li>
                             </ul>
                         </div>
