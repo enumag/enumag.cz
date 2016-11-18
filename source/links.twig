@@ -5,8 +5,16 @@ id: links
 categories:
     symfony:
         title: Symfony
+        links:
+            Using symfony forms with DDD: http://allwrightythen.com/ddd-with-symfony-forms/
     nette:
         title: Nette
+    libraries:
+        title: PHP libraries
+        links:
+            Codeception: http://codeception.com/
+            Phony: http://eloquent-software.com/phony/latest/
+            Slugify: https://github.com/cocur/slugify
     html:
         title: HTML / CSS / JS
         links:
@@ -20,8 +28,11 @@ categories:
             PhpStorm Tips: http://phpstorm.tips/
     other:
         title: Other
+        links:
+            System architecture (cz): https://fprochazka.github.io/fi-muni-PA165-project/wiki/architecture/
+            Prestissimo (composer addon): https://github.com/hirak/prestissimo
     blogs_cz:
-        title: Blogs (cz only)
+        title: Blogs (cz)
         links:
             Tomáš Votruba: http://tomasvotruba.cz
             Filip Procházka: https://filip-prochazka.com
@@ -46,7 +57,7 @@ categories:
 
             <div class="row">
                 <div class="col-md-12">
-                    <p>I often come across various useful resources - articles, libraries, utilites, comparisons, blogs, etc. - but then later when I actually need it I can't remember where I found it. On this page I'm gathering everything I found useful and recommend you to read.</p>
+                    <p>I often come across various useful resources - articles, libraries, videos, utilites, comparisons, blogs, etc. - but then later when I actually need them I can't remember where I found it. <strong>On this page I'm gathering everything I found useful and recommend you to read and use.</strong></p>
 
                     <div class="links">
                         {% for category in page.categories if category.links %}
