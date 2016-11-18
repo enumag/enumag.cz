@@ -151,6 +151,10 @@ p {
     clear: both;
 }
 
+h2 {
+    color: #2986c2;
+}
+
 article h2 {
     font-size: 1.8em;
 }
