@@ -43,8 +43,27 @@ pre {
     float: right;
 }
 
+.container > .navbar-header {
+    margin: 0;
+}
+
+.navbar-default .navbar-toggle,
+.navbar-default .navbar-toggle:active {
+    font-size: 1.3em;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.navbar-default .navbar-toggle:hover {
+    background: #1f7db6;
+}
+
 .navbar-default {
     border-color: #fff;
+}
+
+.navbar-nav {
+    margin: 0;
 }
 
 .navbar-default .navbar-nav > li > a {
