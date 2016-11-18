@@ -273,3 +273,11 @@ a.navbar-toggle:hover {
     left: 0;
     bottom: 3px;
 }
+
+.table-libraries td:first-child {
+    padding-left: 10px;
+}
+
+.table-libraries td[colspan]:first-child {
+    padding-left: 20px;
+}

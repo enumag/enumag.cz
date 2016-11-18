@@ -7,48 +7,63 @@ libraries:
         github: 'Zenify/DoctrineMigrations'
         packagist: 'zenify/doctrine-migrations'
         scruntinizer: true
+        description: Integration of doctrine/migrations to Nette Framework.
     validator:
         github: 'Kdyby/Validator'
         packagist: 'kdyby/validator'
+        description: Integration of symfony/validator to Nette framework.
     codeception:
         github: 'Arachne/Codeception'
         packagist: 'arachne/codeception'
-    event-dispatcher:
-        github: 'Arachne/EventDispatcher'
-        packagist: 'arachne/event-dispatcher'
+        description: Integration of Nette framework to Codeception.
     entity-loader:
         github: 'Arachne/EntityLoader'
         packagist: 'arachne/entity-loader'
+        description: Enables object parameters in nette/application.
+    event-dispatcher:
+        github: 'Arachne/EventDispatcher'
+        packagist: 'arachne/event-dispatcher'
+        description: Integration of symfony/event-dispatcher to Nette framework.
     doctrine:
         github: 'Arachne/Doctrine'
         packagist: 'arachne/doctrine'
+        description: Additional integrations of Doctrine to Kdyby and Arachne packages.
     forms:
         github: 'Arachne/Forms'
         packagist: 'arachne/forms'
+        description: Integration of symfony/form to Nette framework.
     upload:
         github: 'Arachne/Upload'
         packagist: 'arachne/upload'
+        description: Handling nette/http file uploads. Intended to be used with kdyby/validator and/or arachne/forms.
     event-manager:
         github: 'Arachne/EventManager'
         packagist: 'arachne/event-manager'
+        description: Simple integration of Doctrine EventManager to Nette framework.
     service-collections:
         github: 'Arachne/ServiceCollections'
         packagist: 'arachne/service-collections'
+        description: Resolvers and iterators over services for nette/di. Used by arachne/forms and other libraries.
     property-access:
         github: 'Arachne/PropertyAccess'
         packagist: 'arachne/property-access'
+        description: Integration of symfony/property-access to nette/di.
     expression-language:
         github: 'Arachne/ExpressionLanguage'
         packagist: 'arachne/expression-language'
+        description: Integration of symfony/expression-language to nette/di.
     twig:
         github: 'Arachne/Twig'
         packagist: 'arachne/twig'
+        description: Basic integration of Twig to Nette Framework. Used by arachne/forms.
     csrf:
         github: 'Arachne/Csrf'
         packagist: 'arachne/csrf'
+        description: Integration of symfony/security-csrf to nette/di.
     container-adapter:
         github: 'Arachne/ContainerAdapter'
         packagist: 'arachne/container-adapter'
+        description: Wrapper for Nette DIC which implements ContainerInterface from Symfony.
 ---
 <div class="container">
     <div class="page">
@@ -61,7 +76,7 @@ libraries:
 
             <div class="row">
                 <div class="col-md-12">
-                    <table class="table table-striped">
+                    <table class="table table-striped table-condensed table-libraries">
                         {% for library in page.libraries %}
                             <tr>
                                 <td>
@@ -92,6 +107,11 @@ libraries:
                                     <a href="https://packagist.org/packages/{{ library.packagist }}">
                                         <img src="https://img.shields.io/packagist/v/{{ library.packagist }}.svg?style=flat-square" alt="Latest stable">
                                     </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan=5>
+                                    {{ library.description }}
                                 </td>
                             </tr>
                         {% endfor %}
