@@ -1,5 +1,5 @@
 # use in a template as {{ site.title }}
-title: Jáchym Toušek - Blog o Nette a Symfony
-disqus_shortname: itsworthsharing
+title: Jáchym Toušek - Blog about Nette and Symfony
+disqus_shortname: enumag
 #google_analytics_tracking_id: "UA-46082345-1"
 url: "http://www.enumag.cz"
