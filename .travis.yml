@@ -1,20 +1,29 @@
 language: php
 
+cache:
+  directories:
+    - $HOME/.composer/cache
+
 php: 7.0
 
-branches:
-    only:
-        - master
-
-env:
-    global:
-        - secure:
+install:
+    - export PATH="$PATH:$HOME/.composer/vendor/bin"
+    - composer global require friendsofphp/php-cs-fixer "^2.0.0@dev"
+    - composer global require satooshi/php-coveralls "^1.0.0"
+    - composer update --no-interaction
 
 before_script:
-    - phpenv config-rm xdebug.ini
-    - composer self-update
-    - composer update --prefer-source
+    - if php -v | grep -q 'Xdebug'; then coverage="--coverage-clover build/logs/clover.xml"; fi
 
 script:
-    - ./bin/deploy-gh-pages.sh
+    - php-cs-fixer fix --dry-run
+    - vendor/bin/phpunit $coverage
 
+after_success:
+- if [[ ! -z $coverage ]]; then coveralls; fi
+
+deploy:
+    provider: script
+    script: ./bin/deploy-gh-pages.sh
+    on:
+        branch: master
