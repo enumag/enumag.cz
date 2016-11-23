@@ -1,5 +1,5 @@
 ---
-title: "Symfony/Validator (3/3): Dynamic constraints"
+title: "How to do Dynamic Constraints in Symfony/Validator"
 categories:
     - Symfony
 perex: > # multi-line string
