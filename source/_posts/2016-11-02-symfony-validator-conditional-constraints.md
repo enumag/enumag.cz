@@ -10,6 +10,7 @@ lang: en
 
 <p class="perex">{{ page.perex|raw }}</p>
 
+
 Use case
 ----
 
@@ -54,6 +55,7 @@ class Client
     // getters and setters
 }
 ```
+
 
 Validation groups
 ----
@@ -158,6 +160,13 @@ class Client implements GroupSequenceProviderInterface
 And that's it! Now Validator will validate the client differently based on the `$type` property and give you all violations.
 
 In the end conditional validation is surprisingly easy with Symfony/Validator. The solution is just a bit hiddden and not widely known.
+
+
+Code & tests
+----
+
+You can find the final [code](https://github.com/enumag/enumag.cz/blob/master/src/2016-11-02-symfony-validator-conditional-constraints/Client.php) on GitHub. Of course it's covered by [tests](https://github.com/enumag/enumag.cz/blob/master/tests/2016-11-02-symfony-validator-conditional-constraints/ConditionalConstraintsTest.php) as well.
+
 
 Usage with Nette Framework
 ----
