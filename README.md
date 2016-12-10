@@ -1,6 +1,6 @@
 # Jáchym Toušek - Sculpin Blog
 
-[![Build Status](https://img.shields.io/travis/TomasVotruba/tomasvotruba.cz.svg?style=flat-square)](https://travis-ci.org/TomasVotruba/tomasvotruba.cz)
+[![Build Status](https://img.shields.io/travis/enumag/enumag.cz.svg?style=flat-square)](https://travis-ci.org/enumag/enumag.cz)
 
 ## How to run it?
 
