@@ -24,6 +24,18 @@ after_success:
 
 deploy:
     provider: script
-    script: ./bin/deploy-gh-pages.sh
+    script:
+        - vendor/bin/statie generate
+        - vendor/bin/statie push-to-github enumag/enumag.cz --token=${GH_TOKEN}
     on:
-        branch: master
+        branch: gh-pages
+
+env:
+  global:
+    # go to: Gitub User => Settings => Personal Access Token => Generate New Token
+    # select "Repo" scope    
+    # run in shell in git root: travis encrypt GH_TOKEN=<code>
+
+    # if repo is not recognized by travis api, go to https://travis-ci.org/<repository-slug>, like githu.com/<repository-slug>
+    # and add it there; like you do when you want to run tests on some repository
+    - secure: 
