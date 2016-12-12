@@ -2,8 +2,7 @@
 title: "How to do Dynamic Constraints in Symfony/Validator"
 categories:
     - Symfony
-perex: > # multi-line string
-    Some edge-cases with Symfony Validator might force you to create a constraint dynamically during the validation. This article will show you how to do it and how to solve error mapping for such constraints.
+perex: Some edge-cases with Symfony Validator might force you to create a constraint dynamically during the validation. This article will show you how to do it and how to solve error mapping for such constraints.
 thumbnail: symfony.png
 lang: en
 ---

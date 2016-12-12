@@ -2,8 +2,7 @@
 title: "How to do Conditional Constraints in Symfony/Validator"
 categories:
     - Symfony
-perex: > # multi-line string
-    In some more complicated cases you need to do some validations only if some condition is met. This article covers the tricks you should use including a new feature in Symfony 3.2.
+perex: In some more complicated cases you need to do some validations only if some condition is met. This article covers the tricks you should use including a new feature in Symfony 3.2.
 thumbnail: symfony.png
 lang: en
 ---
