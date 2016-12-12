@@ -51,7 +51,7 @@ categories:
         <div class="main">
             <div class="row">
                 <header class="page-header text-center">
-                    <h1>{{ page.title }}</h1>
+                    <h1>{$page->title}</h1>
                 </header>
             </div>
 
@@ -60,19 +60,20 @@ categories:
                     <p>I often come across various useful resources - articles, libraries, videos, utilites, comparisons, blogs, etc. - but then later when I actually need them I can't remember where I found it. <strong>On this page I'm gathering everything I found useful and recommend you to read and use.</strong></p>
 
                     <div class="links">
-                        {% for category in page.categories if category.links %}
-                            <h2>{{ category.title }}</h2>
+                        {foreach $page->categories as $category}
+                            {continueIf !$category->links}
+                            <h2>{$category->title}</h2>
 
                             <ul>
-                            {% for title, link in category.links %}
+                            {foreach $category->links as $title => $link}
                                 <li>
-                                    <a href="{{ link }}">
-                                        {{ title }}
+                                    <a href="{$link}">
+                                        {$title}
                                     </a>
                                 </li>
-                            {% endfor %}
+                            {/foreach}
                             </ul>
-                        {% endfor %}
+                        {/foreach}
                     </div>
                 </div>
             </div>
