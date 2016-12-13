@@ -27,7 +27,7 @@ class Client
     /**
      * @var int
      * @Assert\NotNull()
-     * @Assert\Choice({Client::TYPE_COMPANY, CLIENT::TYPE_PERSON})
+     * @Assert\Choice({ Client::TYPE_COMPANY, CLIENT::TYPE_PERSON })
      */
     protected $type;
 
@@ -72,7 +72,7 @@ class Client
     /**
      * @var int
      * @Assert\NotNull()
-     * @Assert\Choice({Client::TYPE_COMPANY, CLIENT::TYPE_PERSON})
+     * @Assert\Choice({ Client::TYPE_COMPANY, CLIENT::TYPE_PERSON })
      */
     protected $type;
 

@@ -88,15 +88,15 @@ libraries:
                                     </a>
                                 </td>
                                 <td>
-                                    {% if library.scruntinizer is defined %}
+                                    {if isset($library->scruntinizer)}
                                         <a href="https://scrutinizer-ci.com/g/{$library->github}">
                                             <img src="https://img.shields.io/scrutinizer/coverage/g/{$library->github}.svg?style=flat-square" alt="Code Coverage">
                                         </a>
-                                    {% else %}
+                                    {else}
                                         <a href="https://coveralls.io/github/{$library->github}?branch=master">
                                             <img src="https://img.shields.io/coveralls/{$library->github}/master.svg?style=flat-square" alt="Coverage Status">
                                         </a>
-                                    {% endif %}
+                                    {/if}
                                 </td>
                                 <td>
                                     <a href="https://www.versioneye.com/php/{$library->packagist|replace:['/' => ':']}">
