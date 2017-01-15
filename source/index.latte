@@ -21,7 +21,7 @@ id: blog
             </p>
 
             {foreach $posts as $post}
-                {include post}
+                {include "post" post => $post}
             {/foreach}
         </div>
     </div>
