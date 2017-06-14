@@ -3,11 +3,6 @@ layout: default
 title: Libraries maintained by me
 id: open-source
 libraries:
-    migrations:
-        github: 'Zenify/DoctrineMigrations'
-        packagist: 'zenify/doctrine-migrations'
-        scruntinizer: true
-        description: Integration of doctrine/migrations to Nette Framework.
     validator:
         github: 'Kdyby/Validator'
         packagist: 'kdyby/validator'
@@ -20,10 +15,6 @@ libraries:
         github: 'Arachne/EntityLoader'
         packagist: 'arachne/entity-loader'
         description: Enables object parameters in nette/application.
-    event-dispatcher:
-        github: 'Arachne/EventDispatcher'
-        packagist: 'arachne/event-dispatcher'
-        description: Integration of symfony/event-dispatcher to Nette framework.
     doctrine:
         github: 'Arachne/Doctrine'
         packagist: 'arachne/doctrine'
@@ -65,53 +56,54 @@ libraries:
         packagist: 'arachne/container-adapter'
         description: Wrapper for Nette DIC which implements ContainerInterface from Symfony.
 ---
-<div class="container">
+
+<div n:block="content" class="container">
     <div class="page">
         <div class="main">
             <div class="row">
                 <header class="page-header text-center">
-                    <h1>{$page->title}</h1>
+                    <h1>{$title}</h1>
                 </header>
             </div>
 
             <div class="row">
                 <div class="col-md-12">
                     <table class="table table-striped table-condensed table-libraries">
-                        {foreach $page->libraries as $library}
+                        {foreach $libraries as $library}
                             <tr>
                                 <td>
-                                    <a href="http://github.com/{$library->github}">{$library->github}</a>
+                                    <a href="http://github.com/{$library[github]}">{$library[github]}</a>
                                 </td>
                                 <td>
-                                    <a href="https://travis-ci.org/{$library->github}">
-                                        <img src="https://img.shields.io/travis/{$library->github}.svg?style=flat-square" alt="Build Status">
+                                    <a href="https://travis-ci.org/{$library[github]}">
+                                        <img src="https://img.shields.io/travis/{$library[github]}.svg?style=flat-square" alt="Build Status">
                                     </a>
                                 </td>
                                 <td>
-                                    {if isset($library->scruntinizer)}
-                                        <a href="https://scrutinizer-ci.com/g/{$library->github}">
-                                            <img src="https://img.shields.io/scrutinizer/coverage/g/{$library->github}.svg?style=flat-square" alt="Code Coverage">
+                                    {if isset($library[scruntinizer])}
+                                        <a href="https://scrutinizer-ci.com/g/{$library[github]}">
+                                            <img src="https://img.shields.io/scrutinizer/coverage/g/{$library[github]}.svg?style=flat-square" alt="Code Coverage">
                                         </a>
                                     {else}
-                                        <a href="https://coveralls.io/github/{$library->github}?branch=master">
-                                            <img src="https://img.shields.io/coveralls/{$library->github}/master.svg?style=flat-square" alt="Coverage Status">
+                                        <a href="https://coveralls.io/github/{$library[github]}?branch=master">
+                                            <img src="https://img.shields.io/coveralls/{$library[github]}/master.svg?style=flat-square" alt="Coverage Status">
                                         </a>
                                     {/if}
                                 </td>
                                 <td>
-                                    <a href="https://www.versioneye.com/php/{$library->packagist|replace:['/' => ':']}">
-                                        <img src="https://img.shields.io/versioneye/d/php/{$library->packagist|replace:['/' => ':']}.svg?style=flat-square" alt="VersionEye">
+                                    <a href="https://www.versioneye.com/php/{$library[packagist]|replace:['/' => ':']}">
+                                        <img src="https://img.shields.io/versioneye/d/php/{$library[packagist]|replace:['/' => ':']}.svg?style=flat-square" alt="VersionEye">
                                     </a>
                                 </td>
                                 <td>
-                                    <a href="https://packagist.org/packages/{$library->packagist}">
-                                        <img src="https://img.shields.io/packagist/v/{$library->packagist}.svg?style=flat-square" alt="Latest stable">
+                                    <a href="https://packagist.org/packages/{$library[packagist]}">
+                                        <img src="https://img.shields.io/packagist/v/{$library[packagist]}.svg?style=flat-square" alt="Latest stable">
                                     </a>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan=5>
-                                    {$library->description}
+                                    {$library[description]}
                                 </td>
                             </tr>
                         {/foreach}

@@ -7,8 +7,9 @@ categories:
         title: Symfony
         links:
             Using symfony forms with DDD: http://allwrightythen.com/ddd-with-symfony-forms/
-    nette:
-        title: Nette
+    #nette:
+        #title: Nette
+        #links:
     libraries:
         title: PHP libraries
         links:
@@ -32,7 +33,7 @@ categories:
             'System architecture (cz)': https://fprochazka.github.io/fi-muni-PA165-project/wiki/architecture/
             'Prestissimo (composer addon)': https://github.com/hirak/prestissimo
     blogs_cz:
-        title: Blogs (cz)
+        title: 'Blogs (cz)'
         links:
             Nikita Popov: http://nikic.github.io
             Tomáš Votruba: http://tomasvotruba.cz
@@ -47,12 +48,12 @@ categories:
             Radek Dostál: https://www.radekdostal.cz
 ---
 
-<div class="container">
+<div n:block="content" class="container">
     <div class="page">
         <div class="main">
             <div class="row">
                 <header class="page-header text-center">
-                    <h1>{$page->title}</h1>
+                    <h1>{$title}</h1>
                 </header>
             </div>
 
@@ -61,12 +62,11 @@ categories:
                     <p>I often come across various useful resources - articles, libraries, videos, utilites, comparisons, blogs, etc. - but then later when I actually need them I can't remember where I found it. <strong>On this page I'm gathering everything I found useful and recommend you to read and use.</strong></p>
 
                     <div class="links">
-                        {foreach $page->categories as $category}
-                            {continueIf !$category->links}
-                            <h2>{$category->title}</h2>
+                        {foreach $categories as $category}
+                            <h2>{$category[title]}</h2>
 
                             <ul>
-                            {foreach $category->links as $title => $link}
+                            {foreach $category[links] as $name => $link}
                                 <li>
                                     <a href="{$link}">
                                         {$title}

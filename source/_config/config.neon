@@ -1,10 +1,9 @@
-# use in a template as {$disqusShortname} etc.
-disqusShortname: itsworthsharing
+# use in a template as {$siteUrl} etc.
+disqusShortname:
 googleAnalyticsTrackingId:
 fbTrackingId:
 siteTitle: Jáchym Toušek
 siteUrl: "http://www.enumag.cz"
-blogPostOnHomepageCount: 3
 
 # sculpin configuration
 configuration:
@@ -12,4 +11,4 @@ configuration:
     githubRepositorySlug: enumag/enumag.cz
 
 # translations
-lang: cs
+lang: en
