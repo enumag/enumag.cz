@@ -95,13 +95,13 @@ h1 {
 }
 
 .btn-primary, .btn-primary:active, .btn-primary:focus {
-    background-color: #08c;
-    border-color: #08c;
+    background-color: #124768;
+    border-color: #124768;
 }
 
 .btn-primary:hover  {
-    background-color: #0af;
-    border-color: #0af;
+    background-color: #1f7db6;
+    border-color: #1f7db6;
 }
 
 pre {
@@ -115,7 +115,7 @@ pre {
 
 /* true colors */
 .navbar {
-    background-color: #08c;
+    background-color: #124768;
 }
 
 .navbar-default .navbar-nav > li > a {
@@ -266,7 +266,7 @@ pre {
 
 /* menu */
 nav {
-    background: #08c;
+    background: #124768;
     font-family: 'Lato', Arial, sans-serif;
     font-weight: 700;
 }
