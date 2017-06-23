@@ -7,7 +7,8 @@
 
 ```sh
 composer update
-vendor/bin/statie generate --server
+vendor/bin/statie generate
+php -S localhost:8000 -t output
 ```
 
 And open `http://localhost:8000`.
