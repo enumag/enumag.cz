@@ -3,10 +3,5 @@
         "php": "~7.0",
         "symplify/statie": "~1.2",
         "symfony/yaml": "^3.1"
-    },
-    "autoload-dev": {
-        "classmap": [
-            "src/"
-        ]
     }
 }
