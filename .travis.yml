@@ -10,6 +10,8 @@ install:
     - export PATH="$PATH:$HOME/.composer/vendor/bin"
     - composer update --no-interaction
 
+script: true
+
 deploy:
     provider: script
     script:
