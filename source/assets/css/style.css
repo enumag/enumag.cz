@@ -384,7 +384,76 @@ nav .logo {
     color: #fff;
 }
 
-
 .navbar-collapse {
     padding: 0;
+}
+
+.content-about {
+    text-align: center;
+}
+
+.contacts {
+    line-height: 2em;
+    list-style: none;
+    display: inline-block;
+    text-align: left;
+    margin-top: 2em;
+    padding: 0;
+}
+.contacts span {
+    width: 70px;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.02em;
+}
+
+.contacts a {
+    font-size: 1.4em;
+}
+
+.contacts a + a {
+    position: relative;
+    padding-left: 13px;
+    margin-left: 10px;
+}
+
+.contacts a + a:before {
+    content: '';
+    position: absolute;
+    width: 1px;
+    background: #5c5c5c;
+    display: block;
+    top: 5px;
+    left: 0;
+    bottom: 3px;
+}
+
+@media (min-width: 480px) {
+    .rss-btn {
+        position: absolute;
+        top: -100px;
+        right: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .links ul {
+        -moz-column-count: 2;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 20px;
+        column-count: 2;
+        column-gap: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .links ul {
+        -moz-column-count: 3;
+        -moz-column-gap: 20px;
+        -webkit-column-count: 3;
+        -webkit-column-gap: 20px;
+        column-count: 3;
+        column-gap: 20px;
+    }
 }
