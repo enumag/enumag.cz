@@ -230,13 +230,23 @@ nav ul {
 }
 
 nav ul li {
-    float: left;
     display: block;
     position: relative;
 }
 
 nav ul li a {
-    padding: .81em 1em;
+    padding: .2em 1em;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    nav ul li {
+        float: left;
+    }
+
+    nav ul li a {
+        padding: .81em 1em;
+    }
 }
 
 nav a {
@@ -307,8 +317,6 @@ nav .logo {
     font-size: 1.1em;
     padding-left: 25px;
     padding-right: 25px;
-    height: 60px;
-    line-height: 40px;
     margin: 0;
 }
 
@@ -317,12 +325,14 @@ nav .logo {
     padding-top: 15px;
     padding-bottom: 15px;
     cursor: pointer;
+    line-height: 40px;
 }
 
 @media (min-width: 768px) {
     .nav,
     .navbar-default .navbar-nav > li > a {
         height: 70px;
+        line-height: 40px;
     }
 }
 
