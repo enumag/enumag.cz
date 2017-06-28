@@ -1,31 +1,26 @@
 language: php
 
-cache:
-  directories:
-    - $HOME/.composer/cache
+php: 7.1
 
-php: 7.0
+branches:
+  only:
+    - master
 
-install:
-    - export PATH="$PATH:$HOME/.composer/vendor/bin"
-    - composer update --no-interaction
+before_script:
+  - composer update
 
-script: true
-
-deploy:
-    provider: script
-    script:
-        - vendor/bin/statie generate
-        - vendor/bin/statie push-to-github enumag/enumag.cz --token=${GH_TOKEN}
-    on:
-        branch: gh-pages
+script:
+  - vendor/bin/statie generate
+  - vendor/bin/statie push-to-github enumag/enumag.cz --token=${GH_TOKEN}
 
 env:
   global:
-    # go to: Gitub User => Settings => Personal Access Token => Generate New Token
-    # select "Repo" scope    
-    # run in shell in git root: travis encrypt GH_TOKEN=<code>
+    # Go to: Gitub User => Settings => Personal Access Token => Generate New Token
+    # Select "Repo" scope
 
-    # if repo is not recognized by travis api, go to https://travis-ci.org/<repository-slug>, like githu.com/<repository-slug>
-    # and add it there; like you do when you want to run tests on some repository
-    - secure: 
+    # Download Travis CLI tool locally: https://github.com/travis-ci/travis.rb#installation
+    # Run in shell in repository root: travis encrypt GH_TOKEN=<code>
+
+    # If repo is not recognized by travis api, go to https://travis-ci.org/<repository-slug>, like githu.com/<repository-slug>
+    # And add it there; like you do when you want to run tests on some repository
+    - secure: AdSVqAJeOH9xrWcyltf4BsDz3emjEZDu5E5qzbcx56lB6pWw0bd1PfI8oprZk3gkXiPrO3oEf6jTcLaGEnTmPzanq5XTKxGd5TLk36YsS31NRrWtMZhoJwU+uKM+UZowSV2/BIzqtE1kIj0/F4v2jEZzCsyGbNoO0kQOcqE4dR1/I+VdOr7txRZHQ6XDfdK93UMhI2tJU5K7WFAQu9h81PL2IonytoP0acxu29RUiSShcCjc8wEDjsk2Ms8lj3JwNz3hYExTJZlgRsq8sxs05NIu0fH1CE24Q9Nu53FpuvZN1q9EhWumWNe1IFTgdoUbvCuBc2yA41wxEi24AAMbVaFyB86hrOamyKmS0euOhu+7PLfkTstCqb9jF2MOTNOFTSUiM2dXNAl43sIi5bZT3O6cGN8WcLrzvn+/zm4gr0IrcdICz/C2+GfRBWXYTGJcJCIhhGOisleo8+HOSxTWh2Ke4yHHLnvwgunJqqx7yPy6jzxAKSQWRwANzJmYgIkeSFpLSLmMQUPfGJGyzt6vDotSEnTZt4zjKSwjsY/sssSKcSTiCbOLWekJ55MYm2hQXfkKEHgTFgmFO578LlLlEztUX+W2FqI8YnkBHCQcsruiYVMoTY4rSyXbGgIbF4CN4XnQ2BtMkbeZyhhWNfuD1KSpGJwXXpxgq6LG2PE0p58=
