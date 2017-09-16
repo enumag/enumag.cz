@@ -7,7 +7,7 @@ branches:
     - master
 
 before_script:
-  - composer update
+  - composer install
 
 script:
   - vendor/bin/statie generate
