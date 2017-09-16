@@ -15,6 +15,26 @@ libraries:
         github: 'Arachne/EntityLoader'
         packagist: 'arachne/entity-loader'
         description: Enables object parameters in nette/application.
+    security:
+        github: 'Arachne/Security'
+        packagist: 'arachne/security'
+        description: Authentication and authorization for Nette framework. Deals with cases that are difficult to implement with nette/security. 
+    verifier:
+        github: 'Arachne/Verifier'
+        packagist: 'arachne/verifier'
+        description: Requirements verification for nette/application actions and components.
+    security-verification:
+        github: 'Arachne/SecurityVerification'
+        packagist: 'arachne/security-verification'
+        description: Integrates Arachne/Security into Arachne/Verifier.
+    parameter-validation:
+        github: 'Arachne/ParameterValidation'
+        packagist: 'arachne/parameter-validation'
+        description: Parameter validation for Arachne/Verifier.
+    components-protection:
+        github: 'Arachne/ComponentsProtection'
+        packagist: 'arachne/components-protection'
+        description: Security for nette/application components.
     doctrine:
         github: 'Arachne/Doctrine'
         packagist: 'arachne/doctrine'
@@ -54,7 +74,7 @@ libraries:
     container-adapter:
         github: 'Arachne/ContainerAdapter'
         packagist: 'arachne/container-adapter'
-        description: Wrapper for Nette DIC which implements ContainerInterface from Symfony.
+        description: Wrapper for Nette DIC which implements ContainerInterface from PSR-11.
 ---
 
 <div n:block="content" class="container">
