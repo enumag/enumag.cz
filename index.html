@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog | Jáchym Toušek</title>
+        <meta charset="utf-8">
+        <meta name="robots" content="index, follow">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+
+
+    <link rel="amphtml" href="/amp/index.html">
+</head>
+    <body>
+<header class="header">
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <div class="logo">
+                    <a href="/">
+                        <img src="https://www.gravatar.com/avatar/5632d1bf9598d8d03fa3da1c54f2118e?s=60" class="pull-left">
+                        Jáchym Toušek
+                        <span class="nickname">@enumag</span>
+                    </a>
+                </div>
+                <a class="navbar-toggle collapsed" data-toggle="collapse"
+                   data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <em class="fa fa-bars fa-fw"></em>
+                    Menu
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="/">Blog</a>
+                    </li>
+                    <li>
+                        <a href="/open-source">Open-Source</a>
+                    </li>
+                    <li>
+                        <a href="/links">Links</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+        <div class="mainContent">
+<div class="page">
+    <div class="container">
+        <header class="page-header text-center">
+            <h1>Blog</h1>
+        </header>
+
+        <div class="main">
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/09/11/arachne-verifier-plus-arachne-entity-loader-using-entities-in-verifier-rules/">
+            <h2>Arachne/Verifier + Arachne/EntityLoader - Using Entities in Verifier Rules</h2>
+        </a>
+
+        <time datetime="2017-09-Mon">
+            11 September 2017
+        </time>
+    </header>
+
+    <p>
+        This article demonstrates that while Arachne components are mostly independent on each other, their potential raises dramatically when you use them together. Push both <a href="https://github.com/Arachne/ParameterValidation">Arachne/ParameterValidation</a> and <a href="https://github.com/Arachne/SecurityVerification">Arachne/SecurityVerification</a> to their limits with <a href="https://github.com/Arachne/EntityLoader">Arachne/EntityLoader</a>!
+    </p>
+    <div class="clearfix"></div>
+</article>
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/09/04/arachne-entity-loader-object-parameters-for-nette-application/">
+            <h2>Arachne/EntityLoader - Object Parameters for Nette/Application</h2>
+        </a>
+
+        <time datetime="2017-09-Mon">
+            4 September 2017
+        </time>
+    </header>
+
+    <p>
+        Ever wanted to get rid of <code>EntityManager::find($id)</code> as the first thing in your every presenter action?
+With <a href="https://github.com/Arachne/EntityLoader">Arachne/EntityLoader</a> you can.
+Of course it is not limited to Doctrine, you can easily use it with a different ORM library.
+    </p>
+    <div class="clearfix"></div>
+</article>
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/08/28/arachne-verifier-request-validator-for-nette-application/">
+            <h2>Arachne/Verifier - Request Validator for Nette/Application</h2>
+        </a>
+
+        <time datetime="2017-08-Mon">
+            28 August 2017
+        </time>
+    </header>
+
+    <p>
+        The concept behind <a href="https://github.com/Arachne/Verifier">Arachne/Verifier</a> was originally meant to solve annotations-based authorization for <a href="https://github.com/nette/application">Nette/Application</a>.
+Now after years of development it is no longer limited to neither annotations nor authorization making it a very powerful tool for your security layer.
+    </p>
+    <div class="clearfix"></div>
+</article>
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/08/21/arachne-security-simplified-authorizator-and-fixed-acl-callbacks/">
+            <h2>Arachne/Security - Simplified Authorizator and Fixed ACL Callbacks</h2>
+        </a>
+
+        <time datetime="2017-08-Mon">
+            21 August 2017
+        </time>
+    </header>
+
+    <p>
+        Authorization in <a href="https://github.com/nette/security">Nette/Security</a> has some long-known drawbacks as demonstrated in my 4 years old <a href="https://forum.nette.org/cs/13458-security-iauthorizator-a-identita">RFC</a> (Czech only).
+This article will show you how you can solve these problems using the enhanced API provided by <a href="https://github.com/Arachne/Security">Arachne/Security</a>.
+    </p>
+    <div class="clearfix"></div>
+</article>
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/08/14/arachne-security-separate-authentication-and-session-refresh/">
+            <h2>Arachne/Security - Separate Authentication and Session Refresh</h2>
+        </a>
+
+        <time datetime="2017-08-Mon">
+            14 August 2017
+        </time>
+    </header>
+
+    <p>
+        In many cases <a href="https://github.com/nette/security">Nette/Security</a> lacks the API needed for certain tasks.
+Experienced Nette users therefore often recommend using some custom solution instead.
+In this article I'll go over the known problems with user authentication and how <a href="https://github.com/Arachne/Security">Arachne/Security</a> can help you solve them.
+    </p>
+    <div class="clearfix"></div>
+</article>
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/02/24/symfony-validator-dynamic-constraints/">
+            <h2>How to use Dynamic Constraints with Symfony/Validator</h2>
+        </a>
+
+        <time datetime="2017-02-Fri">
+            24 February 2017
+        </time>
+    </header>
+
+    <p>
+        Some edge-cases with Symfony Validator might force you to create a constraint dynamically during the validation. This article will show you how to do it and how to solve error mapping for such constraints.
+    </p>
+    <div class="clearfix"></div>
+</article>
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/02/18/symfony-validator-conditional-constraints/">
+            <h2>How to use Conditional Constraints with Symfony/Validator</h2>
+        </a>
+
+        <time datetime="2017-02-Sat">
+            18 February 2017
+        </time>
+    </header>
+
+    <p>
+        In some more complicated cases you need to do some validations only if some condition is met. This article covers the tricks you should use including a new feature in Symfony 3.2.
+    </p>
+    <div class="clearfix"></div>
+</article>
+<article class="blog-post">
+    <header>
+
+        <a href="https://pehapkari.cz/blog/2017/02/11/symfony-validator-comparison-constraints/">
+            <h2>How to use Comparison Constraints with Symfony/Validator</h2>
+        </a>
+
+        <time datetime="2017-02-Sat">
+            11 February 2017
+        </time>
+    </header>
+
+    <p>
+        With Symfony/Validator there is no obvious way to implement validations like comparing a value to another property on the same object. There are several articles about this topic already but literally all of them are completely outdated. In this article I'll cover the correct way to solve this.
+    </p>
+    <div class="clearfix"></div>
+</article>
+        </div>
+    </div>
+</div>        </div>
+
+
+<script>
+    ga=function(){ ga.q.push(arguments) };
+    ga.q=[];
+    ga.l=+new Date;
+    ga('create', null, 'auto');
+    ga('send','pageview');
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+<script>
+    !function(f,b,e,v,n,t,s){ if(f.fbq)return;n=f.fbq=function(){ n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+            document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', null);
+    fbq('track', 'PageView');
+</script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
+</html>
