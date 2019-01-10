@@ -1,12 +1,10 @@
 ---
-layout: default
+layout: "_layouts/default.latte"
 title: Blog
-use:
-    - posts
 id: blog
 ---
 
-<div n:block="content" class="page">
+<div class="page">
     <div class="container">
         <header class="page-header text-center">
             <h1>{$title}</h1>
@@ -21,7 +19,7 @@ id: blog
             </p>*}
 
             {foreach $posts as $post}
-                {include "post" post => $post}
+                {include "_snippets/post/post.latte" post => $post}
             {/foreach}
         </div>
     </div>

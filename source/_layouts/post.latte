@@ -1,23 +1,18 @@
-{extends "default"}
+{extends "_layouts/default.latte"}
 
 {block content_wrapper}
     <div class="page">
         <div class="container">
             <div class="main">
-                {include "postHeader", 'post' => $post, 'singlePost' => TRUE}
+                {include "_snippets/post/post.latte", 'post' => $post}
 
                 <p class="perex">{$post['perex']|noescape}</p>
 
                 {$post['content']|noescape}
-
-                <h2>{="post.i_want_your_opinion"|translate: $post['lang'] ?? 'cs'}</h2>
-
-                {include "disqusComments", 'post' => $post}
             </div>
         </div>
     </div>
 {/block}
-
 
 {block socialTags}
     {* Facebook sharing *}
@@ -41,9 +36,7 @@
 
 {block additionalJavascript}
     <script src="/assets/prism/prism.js"></script>
-    <script id="dsq-count-scr" src="http://{$disqusShortname}.disqus.com/count.js" async defer></script>
 {/block}
-
 
 {block additionalCss}
     <link href="/assets/prism/prism.css" rel="stylesheet" type="text/css" />
