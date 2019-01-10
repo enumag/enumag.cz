@@ -1,11 +1,7 @@
 parameters:
-    fb_tracking_id:
-    google_analytics_tracking_id:
     site_title: "Jáchym Toušek"
     site_url: "http://enumag.cz"
-    disqus_shortname:
 
-    amp: true
     markdown_headline_anchors: true
     post_route: blog/:year/:month/:day/:title
     github_repository_slug: enumag/enumag.cz
