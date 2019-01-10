@@ -1,6 +1,4 @@
 parameters:
-    fb_tracking_id:
-    google_analytics_tracking_id:
     site_title: "Jáchym Toušek"
     site_url: "http://enumag.cz"
 
