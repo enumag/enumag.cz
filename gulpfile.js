@@ -12,9 +12,9 @@ gulp.task('default', function () {
         console.error(stderr);
     });
 
-    // Run local server, open localhost:8002 in your browser
-    exec('php -S localhost:8002 -t output');
-    console.log('Local PHP server started at "http://localhost:8002", open browser to see it.');
+    // Run local server, open localhost:8000 in your browser
+    exec('php -S localhost:8000 -t output');
+    console.log('Local PHP server started at "http://localhost:8000", open browser to see it.');
 
     // For the second arg see: https://github.com/floatdrop/gulp-watch/issues/242#issuecomment-230209702
     return watch(['source/**/*', '!**/*___jb_tmp___'], function () {
